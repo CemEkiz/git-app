@@ -22,6 +22,9 @@ class Workout {
 	}
 }
 
+// const workout = new Workout();
+// console.log(workout);
+
 class Running extends Workout {
 	constructor(coords, distance, duration, cadence) {
 		super(coords, distance, duration);
@@ -36,6 +39,9 @@ class Running extends Workout {
 	}
 }
 
+// const running = new Running();
+// console.log(running);
+
 class Cycling extends Workout {
 	constructor(coords, distance, duration, elevationGain) {
 		super(coords, distance, duration);
@@ -48,6 +54,9 @@ class Cycling extends Workout {
 		this.speed = this.distance / (this.duration / 60);
 	}
 }
+
+// const cycling = new Cycling();
+// console.log(cycling);
 
 // Experimentation
 // const run1 = new Running([39, -12], 5.2, 24, 178);
@@ -92,7 +101,6 @@ class App {
 
 		const coords = [latitude, longitude];
 
-		console.log(this);
 		this.#map = L.map('map').setView(coords, 13);
 
 		L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
@@ -144,3 +152,4 @@ class App {
 }
 
 const app = new App();
+// console.log(app);
